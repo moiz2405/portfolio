@@ -3,7 +3,7 @@ import {
 } from 'react-icons/fa'
 import { 
   SiTypescript, SiNextdotjs, SiExpress, SiMongodb, 
-  SiPostgresql, SiDjango, SiKubernetes, SiGraphql, SiTailwindcss 
+  SiPostgresql, SiKubernetes,  SiTailwindcss 
 } from 'react-icons/si'
 
 const skills = [

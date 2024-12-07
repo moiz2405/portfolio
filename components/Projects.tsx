@@ -35,7 +35,7 @@ const projects = [
     description: 'Responsive Web Application | Personal Portfolio Website built using Next.js and Tailwind CSS',
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'ShadCN-UI'],
     image: '/images/project-sc/portfolio.png', // Image fallback
-    github: 'https://github.com/moiz2405/Custom-AI',
+    github: 'https://github.com/moiz2405/portfolio',
     demo: 'https://fluent-ai-three.vercel.app/',
   },
   {

@@ -1,6 +1,6 @@
 import Skills from './Skills'
 import Projects from './Projects'
-import Contact from './Contact'
+// import Contact from './Contact'
 import Experience from './Experience'
 
 export default function MainContent() {
