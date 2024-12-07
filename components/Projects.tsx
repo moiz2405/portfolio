@@ -36,7 +36,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'ShadCN-UI'],
     image: '/images/project-sc/portfolio.png', // Image fallback
     github: 'https://github.com/moiz2405/portfolio',
-    demo: 'https://fluent-ai-three.vercel.app/',
+    demo: 'https://almoiz-khan-portfolio.vercel.app/',
   },
   {
     title: 'Custom-AI | AI Components based on Chrome Built-In AI',
