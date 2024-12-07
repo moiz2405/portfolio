@@ -65,6 +65,42 @@ html {
     border-left-width: 2px;
   }
 }
+@keyframes borderMove {
+  0% {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+  25% {
+    border-top-width: 2px;
+    border-right-width: 10px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+  50% {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 10px;
+    border-left-width: 2px;
+  }
+  75% {
+    border-top-width: 10px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+  100% {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 10px;
+  }
+}
+
+.group-hover\:animate-border-effect {
+  animation: borderMove 3s infinite;
+}
 
 .animate-border-effect {
   animation: borderMove 3s ease-in-out infinite;

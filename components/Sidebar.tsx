@@ -62,9 +62,11 @@ export default function Sidebar() {
         <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 transition-colors">
           View Resume
         </Button>
-        <Button className="bg-blue-400 text-gray-900 hover:bg-blue-500 transition-colors">
-          Contact Me
-        </Button>
+        <Button className="bg-blue-400 text-gray-900 hover:bg-blue-500 transition-colors relative overflow-hidden">
+  <span className="relative z-10">Contact Me</span>
+  <span className="absolute inset-0 border-2 border-blue-500 animate-border-effect"></span>
+</Button>
+
       </div>
     </aside>
   )
