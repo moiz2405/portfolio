@@ -25,7 +25,7 @@ const skills = [
   { name: 'Python', icon: FaPython },
   { name: 'HTML5', icon: FaHtml5 },
   { name: 'CSS3', icon: FaCss3Alt },
-  { name: 'Tailwind CSS', icon: SiTailwindcss },
+  { name: 'Tailwind', icon: SiTailwindcss },
 ]
 
 export default function Skills() {
