@@ -9,6 +9,35 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.box {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* padding: 2px; */
+  /* height: 100%; Adjusted to ensure the container takes up full height */
+  /* width: 100%; Ensures the box takes up full width */
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: linear-gradient(#1F2937, #172554) padding-box, linear-gradient(
+    var(--angle),
+    #070707,
+    #687aff
+  ) border-box;
+  animation: 8s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 
 /* Custom scrollbar styles */
 .custom-scroll::-webkit-scrollbar {
@@ -98,18 +127,6 @@ html {
   }
 }
 
-.group-hover\:animate-border-effect {
-  animation: borderMove 3s infinite;
-}
-
-.animate-border-effect {
-  animation: borderMove 3s ease-in-out infinite;
-}
-
-
-.animate-border-effect {
-  animation: borderMove 3s infinite;
-}
 
 
 @layer base {
