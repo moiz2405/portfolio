@@ -12,7 +12,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'MongoDB', 'Auth0'],
     image: '/images/project-sc/codenexus.png',
     github: 'https://github.com/moiz2405/CODENEXUS',
-    demo: 'https://code-nexus-delta.vercel.app/?__vercel_draft=1',
+    demo: 'https://code-nexus-delta.vercel.app/',
   },
   {
     title: 'MetaMint | NFT Marketplace',
@@ -36,7 +36,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'ShadCN-UI'],
     image: '/images/project-sc/portfolio.png', // Image fallback
     github: 'https://github.com/moiz2405/portfolio',
-    demo: 'https://almoiz-khan-portfolio.vercel.app/',
+    demo: 'https://almoizkhan.me',
   },
   {
     title: 'Custom-AI | AI Components based on Chrome Built-In AI',
@@ -85,7 +85,7 @@ export default function Projects() {
                     alt={`${project.title} screenshot`} 
                     layout="fill"
                     objectFit="cover"
-                    className="transition-opacity duration-500" // Smooth transition for image opacity
+                    className="transition-opacity duration-500" 
                   />
                 </div>
               </div>
