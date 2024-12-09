@@ -1,72 +1,97 @@
-"use client"
+'use client'
+
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Twitter } from 'lucide-react'
 import { useState } from 'react'
+import StaticPokemon from './StaticPokemon'
 
 export default function Sidebar() {
-  const [borderColor, setBorderColor] = useState('blue') // Initial border color is blue
-  const [isHovered, setIsHovered] = useState(false) // Track hover state
-
-  const handleImageHover = () => {
-    if (!isHovered) { // Only toggle if not already hovered
-      setBorderColor((prevColor) => (prevColor === 'blue' ? 'white' : 'blue')) // Toggle between blue and white
-      setIsHovered(true) // Mark as hovered
-    }
-  }
-
-  const handleImageLeave = () => {
-    setIsHovered(false) // Reset hover state when mouse leaves
-  }
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <aside className="lg:w-1/3 md:w-1/2 w-full space-y-6 first-line:h-screen bg-gray-800 p-6 rounded-lg shadow-lg">
-      <div className="text-center">
-        <Image
-          src="/images/personal/moiz.jpg"
-          alt="Almoiz Khan"
-          width={200}
-          height={200}
-          className={`rounded-full mx-auto border-4 transition-all duration-300 ${borderColor === 'blue' ? 'border-blue-400' : 'border-white'}`}
-          onMouseEnter={handleImageHover} // Change border color on hover
-          onMouseLeave={handleImageLeave} // Reset hover state on mouse leave
-        />
-        <h1 className="text-2xl font-bold mt-4 text-blue-400">Almoiz Khan</h1>
-        <h1 className="text-xl font-medium mt-2 text-white">Full Stack Developer</h1>
-        <h1 className="text-lg font-medium mt-2 text-white">Building Responsive, Functional, and Detail-Focused Websites</h1>
-        <p className="text-gray-400 mt-2">
-          Based In Hyderabad, India<br />
-          Computer Science UnderGrad<br />
-          Web Development | DevOps | Open Source  
-        </p>
-      </div>
-      <div className="flex justify-center space-x-6 mt-6">
-        {[ 
-          { Icon: Linkedin, href: 'https://www.linkedin.com/in/almoiz-khan/', label: 'LinkedIn' },
-          { Icon: Github, href: 'https://github.com/moiz2405', label: 'GitHub' },
-          { Icon: Twitter, href: 'https://x.com/Almoiz_Khan', label: 'Twitter' },
-        ].map(({ Icon, href, label }) => (
-          <a
-            key={label}
-            href={href}
-            className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-125"
-            aria-label={label}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon size={24} />
-          </a>
-        ))}
-      </div>
-      <div className="flex flex-col space-y-4 mt-6">
-        <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 transition-colors">
-          View Resume
-        </Button>
-        <Button className="bg-blue-400 text-gray-900 hover:bg-blue-500 transition-colors relative overflow-hidden">
-  <span className="relative z-10">Contact Me</span>
-  <span className="absolute inset-0 border-2 border-blue-500 animate-border-effect"></span>
-</Button>
+    <aside
+      className="lg:w-1/3 md:w-1/2 w-full min-h-screen bg-gray-800 p-0 sm:p-0 rounded-lg shadow-2xl flex flex-col transform transition-all duration-500 ease-in-out hover:scale-[1.02] hover:shadow-2xl relative overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Wrapper for the gradient border effect */}
+      <div className="relative w-full h-full rounded-lg bg-gray-800 p-4 sm:p-6">
+        <div className="box absolute inset-0 rounded-lg"></div>
 
+        <div className="flex-grow space-y-6 relative z-10">
+          <div className="text-center relative">
+            <div
+              className={`relative inline-block rounded-full transition-all duration-300 ${isHovered ? 'animate-in' : 'animate-out'}`}
+            >
+              <Image
+                src="/images/personal/moiz.jpg"
+                alt="Almoiz Khan"
+                width={200}
+                height={200}
+                className="rounded-full mx-auto border-4 border-white transition-all duration-300"
+              />
+              <div className={`absolute inset-0 rounded-full transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                   style={{
+                     boxShadow: isHovered ? '0 0 15px 5px rgba(96, 165, 250, 0.7)' : '0 0 15px 5px rgba(255, 255, 255, 0.7)', 
+                     filter: 'blur(5px)',
+                     borderColor: isHovered ? 'blue' : 'white',
+                   }}></div>
+            </div>
+            <div className="flex justify-center space-x-6 mt-6">
+            {[ 
+              { Icon: Linkedin, href: 'https://www.linkedin.com/in/almoiz-khan/', label: 'LinkedIn' },
+              { Icon: Github, href: 'https://github.com/moiz2405', label: 'GitHub' },
+              { Icon: Twitter, href: 'https://x.com/Almoiz_Khan', label: 'Twitter' },
+            ].map(({ Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                className="text-gray-400 hover:text-white transition-colors transform hover:scale-125 hover:rotate-12 relative group"
+                aria-label={label}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon size={28} className="transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></span>
+              </a>
+            ))}
+          </div>
+            <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold mt-4 text-blue-400 transition-all duration-300 transform hover:scale-110 hover:text-white">
+              Full Stack Developer
+            </h1>
+            {/* <h2 className="text-lg sm:text-xl font-medium mt-2 text-white">Full Stack Developer</h2> */}
+            <h3 className="text-base sm:text-lg font-medium mt-2 text-white">
+              Building Responsive, Functional, and Detail-Focused Websites
+            </h3>
+            <p className="text-sm sm:text-base text-gray-400 mt-2">
+              Based In Hyderabad, India<br />
+              Computer Science UnderGrad<br />
+              Web Development | DevOps | Open Source  
+            </p>
+          </div>
+
+          
+
+          <div className="flex flex-col space-y-6 mt-6">
+            <StaticPokemon />
+            <Button
+              variant="outline"
+              className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105 relative overflow-hidden group"
+            >
+              <span className="relative z-10">View Resume</span>
+              <span className="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              <span className="absolute inset-0 border-2 border-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></span>
+            </Button>
+            <Button
+              className="bg-blue-400 text-gray-900 hover:bg-blue-500 transition-all duration-300 relative overflow-hidden transform hover:scale-105 group"
+            >
+              <span className="relative z-10">Contact Me</span>
+              <span className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              <span className="absolute inset-0 border-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></span>
+            </Button>
+          </div>
+        </div>
       </div>
     </aside>
   )

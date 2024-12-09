@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -34,12 +37,21 @@ const experiences: ExperienceItem[] = [
 ]
 
 export default function Experience() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
   return (
     <section id="experience" className="scroll-mt-20">
       <h2 className="text-2xl font-bold mb-6 text-blue-400">Experience</h2>
       <div className="space-y-6">
         {experiences.map((exp, index) => (
-          <Card key={index} className="bg-gray-800 border-gray-600">
+          <Card 
+            key={index} 
+            className={`bg-gray-800 border-gray-600 transition-all duration-300 ease-in-out ${
+              hoveredIndex === index ? 'transform scale-[1.02] shadow-lg' : ''
+            }`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
             <CardContent className="p-6">
               <div className="flex flex-col md:flex-row justify-between mb-2">
                 <h3 className="text-lg font-semibold text-gray-100">{exp.title}</h3>
@@ -49,7 +61,11 @@ export default function Experience() {
               <p className="text-gray-300 mb-4">{exp.description}</p>
               <div className="flex flex-wrap gap-2">
                 {exp.skills.map((skill, skillIndex) => (
-                  <Badge key={skillIndex} variant="secondary" className="bg-blue-400 text-gray-900">
+                  <Badge 
+                    key={skillIndex} 
+                    variant="secondary" 
+                    className="bg-blue-400 text-gray-900 transition-all duration-300 ease-in-out hover:bg-blue-500 hover:scale-105"
+                  >
                     {skill}
                   </Badge>
                 ))}
