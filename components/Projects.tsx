@@ -12,7 +12,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'MongoDB', 'Auth0'],
     image: '/images/project-sc/codenexus.png',
     github: 'https://github.com/moiz2405/CODENEXUS',
-    demo: 'https://code-nexus-delta.vercel.app/',
+    demo: 'https://codenexus.almoizkhan.me',
   },
   {
     title: 'MetaMint | NFT Marketplace',
@@ -20,7 +20,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Express', 'Supabase', 'Tailwind CSS', 'Next-Auth'],
     image: '/images/project-sc/metamint.png',
     github: 'https://github.com/moiz2405/Decentralized-Marketplace',
-    demo: 'https://decentralized-marketplace-delta.vercel.app/',
+    demo: 'https://metamint.almoizkhan.me',
   },
   {
     title: 'Fluent.AI | AI based Language Learning Platform',
@@ -28,7 +28,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Gemini-API', 'Express', 'Supabase', 'Tailwind CSS', 'Next-Auth'],
     image: '/images/project-sc/fluentai.png',
     github: 'https://github.com/moiz2405/Fluent.ai',
-    demo: 'https://fluent-ai-three.vercel.app/',
+    demo: 'https://fluentai.almoizkhan.me',
   },
   {
     title: 'PortFolio | Personal Portfolio Website',
