@@ -26,6 +26,7 @@ html {
   animation: 8s rotate linear infinite;
 }
 
+
 @keyframes rotate {
   to {
     --angle: 360deg;
