@@ -70,37 +70,44 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <div 
-            key={project.title} 
-            className="relative group h-full transition-all duration-300 ease-in-out transform hover:scale-[1.02]" 
+          <div
+            key={project.title}
+            className="relative group h-full transition-all duration-300 ease-in-out transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredProject(project.title)}
             onMouseLeave={() => setHoveredProject(null)}
           >
             {hoveredProject === project.title && project.image && project.demo && (
               <div className="absolute top-[-150px] left-0 w-full h-48 bg-gray-800 rounded-lg shadow-lg overflow-hidden z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="relative w-full h-full">
-                  <Image 
-                    src={project.image} 
-                    alt={`${project.title} screenshot`} 
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
                     layout="fill"
                     objectFit="cover"
-                    className="transition-opacity duration-500" 
+                    className="transition-opacity duration-500"
                   />
                 </div>
               </div>
             )}
 
-            <Card 
-              className="bg-gray-800 border-gray-700 hover:shadow-lg transition-all duration-300 ease-in-out h-full"
+            <Card
+              className="relative bg-gradient-to-tr from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-400 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-[1.03] h-full"
             >
               <CardHeader>
-                <CardTitle className="text-blue-400">{project.title}</CardTitle>
-                <CardDescription className="text-gray-400">{project.description}</CardDescription>
+                <CardTitle className="text-blue-400 text-lg font-semibold tracking-wide">{project.title}</CardTitle>
+                <CardDescription className="text-gray-400 text-sm font-light mt-2">
+                  {project.description}
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded transition-all duration-300 ease-in-out hover:bg-blue-400 hover:text-gray-900">{tech}</span>
+                    <span
+                      key={tech}
+                      className="text-xs font-medium bg-gray-700 text-gray-300 px-2 py-1 rounded-lg shadow-sm transition-all duration-300 hover:bg-blue-400 hover:text-gray-900 hover:shadow-md"
+                    >
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </CardContent>
@@ -124,6 +131,7 @@ export default function Projects() {
                 )}
               </CardFooter>
             </Card>
+
           </div>
         ))}
       </div>
