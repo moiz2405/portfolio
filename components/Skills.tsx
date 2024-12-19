@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { 
   FaJs, FaReact, FaNodeJs, FaPython, FaDocker, FaAws, FaGitAlt, FaHtml5, FaCss3Alt 
 } from 'react-icons/fa'
@@ -30,6 +30,21 @@ const skills = [
 
 export default function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
+  
+  // Create a ref to the audio element
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+
+  // Function to play the sound when hovering over a skill
+  const playSound = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0 // Reset the audio to the start
+      audioRef.current.play().catch((error) => {
+        console.error('Error playing sound:', error)
+      })
+    } else {
+      console.error('Audio reference is null')
+    }
+  }
 
   return (
     <section id="skills" className="scroll-mt-20">
@@ -39,7 +54,10 @@ export default function Skills() {
           <div 
             key={skill.name} 
             className="group flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-            onMouseEnter={() => setHoveredSkill(skill.name)}
+            onMouseEnter={() => {
+              setHoveredSkill(skill.name)
+              playSound() // Play sound on hover
+            }}
             onMouseLeave={() => setHoveredSkill(null)}
           >
             <div className="relative">
@@ -70,6 +88,9 @@ export default function Skills() {
           </div>
         ))}
       </div>
+      
+      {/* Audio element to play the sound */}
+      <audio ref={audioRef} src="/sounds/pokemon_sound.mp3" preload="auto" />
     </section>
   )
 }
