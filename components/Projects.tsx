@@ -36,7 +36,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'ShadCN-UI'],
     image: '/images/project-sc/portfolio.png',
     github: 'https://github.com/moiz2405/portfolio',
-    demo: 'https://almoizkhan.me',
+    demo: '/bruhh',
   },
   {
     title: 'Custom-AI | AI Components based on Chrome Built-In AI',
