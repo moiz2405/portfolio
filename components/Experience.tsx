@@ -43,42 +43,35 @@ export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-20">
       <h2 className="text-2xl font-bold mb-6 text-blue-400">Experience</h2>
-      <div className="space-y-6">
+      <div className="space-y-4">
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.2, delay: index * 0.1 }}
           >
             <Card
-              className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg border border-gray-700 transition-all duration-300 ease-in-out ${hoveredIndex === index ? "transform scale-[1.03] shadow-xl" : ""}`}
+              className={`relative overflow-hidden bg-gradient-to-br from-gray-800/80 to-gray-900/90 rounded-lg border border-gray-700/50 transition-all duration-200 ${
+                hoveredIndex === index ? "transform scale-[1.01] border-blue-400/50 shadow-lg shadow-blue-400/10" : ""
+              }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Glow Effect */}
-              {hoveredIndex === index && (
-                <motion.div
-                  className="absolute inset-0 rounded-lg bg-blue-500 blur-lg opacity-30"
-                  initial={{ opacity: 0, scale: 0.3 }}
-                  animate={{ opacity: 0.2, scale: 1 }}
-                  transition={{ duration: 0.1 }}
-                ></motion.div>
-              )}
-              <CardContent className="relative z-10">
-                <div className="flex flex-col md:flex-row justify-between mb-2">
+              <CardContent className="relative z-10 p-5">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
                   <h3 className="text-lg font-semibold text-gray-100">{exp.title}</h3>
                   <span className="text-sm text-gray-400">{exp.period}</span>
                 </div>
-                <p className="text-blue-400 mb-2">{exp.company}</p>
-                <p className="text-gray-300 mb-4">{exp.description}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-blue-400 mb-2 font-medium">{exp.company}</p>
+                <p className="text-gray-300 mb-4 text-sm">{exp.description}</p>
+                <div className="flex flex-wrap gap-1.5">
                   {exp.skills.map((skill, skillIndex) => (
                     <Badge
                       key={skillIndex}
                       variant="secondary"
-                      className="bg-blue-400 text-gray-900 transition-transform duration-300 ease-in-out hover:bg-blue-500 hover:scale-105"
+                      className="bg-blue-400/20 text-blue-200 border border-blue-400/30 transition-all duration-200 hover:bg-blue-400/30 hover:scale-105"
                     >
                       {skill}
                     </Badge>
