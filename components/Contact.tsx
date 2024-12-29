@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-// all good just checkin
+
 export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-20">
