@@ -91,11 +91,11 @@ export default function Projects() {
             )}
 
             <Card
-              className="relative bg-gradient-to-tr from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-400 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-[1.03] h-full"
+              className="relative bg-gradient-to-tr from-gray-800 to-gray-900 border border-white border-opacity-30 hover:border-blue-400 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-[1.03] h-full"
             >
               <CardHeader>
                 <CardTitle className="text-blue-400 text-lg font-semibold tracking-wide">{project.title}</CardTitle>
-                <CardDescription className="text-gray-400 text-sm font-light mt-2">
+                <CardDescription className="text-white text-sm font-light mt-2">
                   {project.description}
                 </CardDescription>
               </CardHeader>

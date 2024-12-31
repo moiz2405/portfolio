@@ -53,9 +53,8 @@ export default function Experience() {
             transition={{ duration: 0.2, delay: index * 0.1 }}
           >
             <Card
-              className={`relative overflow-hidden bg-gradient-to-br from-gray-800/80 to-gray-900/90 rounded-lg border border-gray-700/50 transition-all duration-200 ${
-                hoveredIndex === index ? "transform scale-[1.01] border-blue-400/50 shadow-lg shadow-blue-400/10" : ""
-              }`}
+              className={`relative overflow-hidden bg-gradient-to-br from-gray-800/80 to-gray-900/90 rounded-lg border border-white border-opacity-25 transition-all duration-200 ${hoveredIndex === index ? "transform scale-[1.01] border-blue-400/50 shadow-lg shadow-blue-400/10" : ""
+                }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
