@@ -14,14 +14,7 @@ const projects = [
     github: 'https://github.com/moiz2405/CODENEXUS',
     demo: 'https://codenexus.almoizkhan.me',
   },
-  {
-    title: 'MetaMint | NFT Marketplace',
-    description: 'Full Stack Web Application | A platform for creators to mint, sell, and buy NFTs.',
-    technologies: ['React', 'Next.js', 'Express', 'Supabase', 'Tailwind CSS', 'Next-Auth'],
-    image: '/images/project-sc/metamint.png',
-    github: 'https://github.com/moiz2405/Decentralized-Marketplace',
-    demo: 'https://metamint.almoizkhan.me',
-  },
+
   {
     title: 'Fluent.AI | AI based Language Learning Platform',
     description: 'Full Stack Web Application | AI based English Learning Platform built Using Gemini-API',
@@ -29,6 +22,14 @@ const projects = [
     image: '/images/project-sc/fluentai.png',
     github: 'https://github.com/moiz2405/Fluent.ai',
     demo: 'https://fluentai.almoizkhan.me',
+  },
+  {
+    title: 'MetaMint | NFT Marketplace',
+    description: 'Full Stack Web Application | A platform for creators to mint, sell, and buy NFTs.',
+    technologies: ['React', 'Next.js', 'Express', 'Supabase', 'Tailwind CSS', 'Next-Auth'],
+    image: '/images/project-sc/metamint.png',
+    github: 'https://github.com/moiz2405/Decentralized-Marketplace',
+    demo: 'https://metamint.almoizkhan.me',
   },
   {
     title: 'PortFolio | Personal Portfolio Website',
