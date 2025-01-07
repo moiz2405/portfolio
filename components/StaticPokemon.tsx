@@ -8,8 +8,9 @@ const pokemonGifs = [
 ];
 
 export default function StaticPokemon() {
-  const handleHover = (sound: string) => {  // Explicitly typing 'sound' as a string
+  const handleHover = (sound: string) => {
     const audio = new Audio(sound);
+    audio.volume = 0.2; // Set volume to 20%
     audio.play();
   };
 

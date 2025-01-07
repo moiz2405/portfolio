@@ -1,8 +1,7 @@
 'use client'
 
 import Image from 'next/image';
-// import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, FileText, Mail } from 'lucide-react';
 import { useState } from 'react';
 import StaticPokemon from './StaticPokemon';
 import Link from 'next/link';
@@ -79,15 +78,17 @@ export default function Sidebar() {
               href="/resume/ALMOIZ_KHAN.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-400 text-gray-900 hover:bg-blue-500 py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105"
+              className="bg-blue-400 text-gray-900 hover:bg-blue-500 py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
             >
-              View Resume
+              <FileText size={20} />
+              <span>View Resume</span>
             </Link>
             <Link
               href="mailto:almoizkhan907@gmail.com"
-              className="bg-blue-400 text-gray-900 hover:bg-blue-500 py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105"
+              className="bg-blue-400 text-gray-900 hover:bg-blue-500 py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
             >
-              Contact Me
+              <Mail size={20} />
+              <span>Contact Me</span>
             </Link>
           </div>
         </div>
