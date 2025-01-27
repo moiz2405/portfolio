@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter, FileText, Mail } from 'lucide-react';
 import { useState } from 'react';
 import StaticPokemon from './StaticPokemon';
 import Link from 'next/link';
-
+// import Cat from '../components/Cat';
 export default function Sidebar() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -74,6 +74,8 @@ export default function Sidebar() {
 
           <div className="flex flex-col space-y-6 mt-6">
             <StaticPokemon />
+            {/* bout to add a rotating cat here  */}
+            {/* <Cat /> */}
             <Link
               href="/resume/ALMOIZ_KHAN.pdf"
               target="_blank"
