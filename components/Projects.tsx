@@ -7,6 +7,14 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
+    title: 'Craftable | Website Builder',
+    description: 'Full Stack Web Application | Platform to build your Website with customizable templates',
+    technologies: ['React', 'Next.js', 'Node.js', 'Tailwind CSS',],
+    image: '/images/project-sc/craftable.png',
+    github: 'https://github.com/moiz2405/Craftable',
+    demo: 'https://craftable.almoizkhan.me',
+  },
+  {
     title: 'CodeNexus | Skill Development Platform',
     description: 'Full Stack Web Application | A platform for developers to learn and improve their skills',
     technologies: ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'MongoDB', 'Auth0'],
