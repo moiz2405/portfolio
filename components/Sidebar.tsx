@@ -12,7 +12,7 @@ export default function Sidebar() {
   return (
     <aside
       className="lg:w-1/3 md:w-1/2 w-full min-h-screen bg-gray-800 
-      p-2 sm:p-0 rounded-lg shadow-2xl flex flex-col transform transition-all duration-500 ease-in-out 
+      p-2 sm:p-0  shadow-2xl flex flex-col transform transition-all duration-500 ease-in-out 
       hover:scale-[1.02] hover:shadow-2xl relative overflow-hidden rounded-xl"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
