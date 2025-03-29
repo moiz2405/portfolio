@@ -6,7 +6,7 @@ export default function Footer() {
           <p className="mt-2">
             <a href="mailto:your.email@example.com" className="text-blue-400 hover:text-blue-300 transition-colors">almoiz907@gmail.com</a>
           </p>
-          <p className="mt-2 text-sm text-gray-500">Built with React and Next.js</p>
+          {/* <p className="mt-2 text-sm text-gray-500">Built with NEXT.js</p> */}
         </div>
       </footer>
     )
