@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter, FileText, Mail } from 'lucide-react';
 import { useState } from 'react';
 import StaticPokemon from './StaticPokemon';
 import Link from 'next/link';
-// import Cat from '../components/Cat';
+import Cat from '../components/Cat';
 export default function Sidebar() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -77,7 +77,7 @@ export default function Sidebar() {
             {/* bout to add a rotating cat here  */}
             {/* <Cat /> */}
             <Link
-              href="/resume/ALMOIZ_KHAN.pdf"
+              href="/resume/AlmoizKhan_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-400 text-gray-900 hover:bg-blue-500 py-2 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
