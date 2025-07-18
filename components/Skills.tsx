@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa'
 import {
   SiTypescript, SiNextdotjs, SiExpress, SiMongodb,
-  SiPostgresql, SiKubernetes, SiTailwindcss
+  SiPostgresql, SiKubernetes, SiTailwindcss, SiFastapi
 } from 'react-icons/si'
 
 const skills = [
@@ -16,6 +16,7 @@ const skills = [
   { name: 'Next.js', icon: SiNextdotjs },
   { name: 'Node.js', icon: FaNodeJs },
   { name: 'Express', icon: SiExpress },
+  { name: 'FastAPI', icon: SiFastapi },
   { name: 'MongoDB', icon: SiMongodb },
   { name: 'PostgreSQL', icon: SiPostgresql },
   { name: 'Docker', icon: FaDocker },
