@@ -7,6 +7,14 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
+    title: 'VISION | Developer Desktop Assistant',
+    description: 'AI Powered Desktop Assistant | Platform to help optimize developers workflows',
+    technologies: ['Python', 'Agno(Prev. Phidata)', 'Pydantic', 'TTS/STT',],
+    image: '/placeholder.svg',
+    github: 'https://github.com/moiz2405/Dev-Assistant',
+    // demo: 'https://craftable.almoizkhan.me',
+  },
+  {
     title: 'Craftable | Website Builder',
     description: 'Full Stack Web Application | Platform to build your Website with customizable templates',
     technologies: ['React', 'Next.js', 'Node.js', 'Tailwind CSS',],
