@@ -15,24 +15,17 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Full Stack Developer",
-    company: "Freelance",
-    period: "Sept-2024 - Present",
-    description: "Developing Full Stack Applications using React, Next.js, Node.js, and MongoDB",
-    skills: ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Docker", "Kubernetes"]
-  },
-  {
-    title: "Open Source Contributor",
-    company: "Layer5 | CNCF | INCF",
-    period: "Aug-2024 - Present",
-    description: "Contributing to Open Source Projects like Meshery, Open Telemetry and CNCF Projects",
-    skills: ["Kubernetes", "Docker", "CI/CD", "Jenkins", "ArgoCD", "Helm", "Kustomize", "Prometheus", "Monokle"]
+    title: " ML & Deep Learning Intern",
+    company: "Shell India",
+    period: "May-2025 - Jun-2025",
+    description: "Improved accuracy of 3 ML models, Analyzed over 100K rows",
+    skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Numpy", "Matplotlib"]
   },
   {
     title: "AI/ML Intern",
-    company: "Google India",
+    company: "Google India(via AICTE)",
     period: "Mar-2024 - Jun-2024",
-    description: "Advanced through the Google AI/ML internship program, learning the latest in AI/ML technologies",
+    description: "Completed project-based learning on supervised and unsupervised ML algorithms",
     skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Numpy", "Matplotlib"]
   }
 ]
