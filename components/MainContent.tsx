@@ -15,10 +15,10 @@ export default function MainContent() {
         opacity: 0.9,
       }}
     >
+      <Experience />
       <Skills />
       <Projects />
       {/* <Contact /> */}
-      <Experience />
     </main>
   )
 }

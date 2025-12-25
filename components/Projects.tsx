@@ -12,7 +12,7 @@ const projects = [
     technologies: ['Python', 'Agno(Prev. Phidata)', 'Pydantic', 'TTS/STT',],
     image: '/placeholder.svg',
     github: 'https://github.com/moiz2405/Dev-Assistant',
-    // demo: 'https://craftable.almoizkhan.me',
+    // demo: 'https://craftable.almoizkhan.tech',
   },
   {
     title: 'Craftable | Website Builder',
@@ -20,7 +20,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Node.js', 'Tailwind CSS',],
     image: '/images/project-sc/craftable.png',
     github: 'https://github.com/moiz2405/Craftable',
-    demo: 'https://craftable.almoizkhan.me',
+    demo: 'https://craftable.almoizkhan.tech',
   },
   {
     title: 'CodeNexus | Skill Development Platform',
@@ -28,7 +28,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'MongoDB', 'Auth0'],
     image: '/images/project-sc/codenexus.png',
     github: 'https://github.com/moiz2405/CODENEXUS',
-    demo: 'https://codenexus.almoizkhan.me',
+    demo: 'https://codenexus.almoizkhan.tech',
   },
   {
     title: 'Fluent.AI | AI based Language Learning Platform',
@@ -36,7 +36,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Gemini-API', 'Express', 'Supabase', 'Tailwind CSS', 'Next-Auth'],
     image: '/images/project-sc/fluentai.png',
     github: 'https://github.com/moiz2405/Fluent.ai',
-    demo: 'https://fluentai.almoizkhan.me',
+    demo: 'https://fluentai.almoizkhan.tech',
   },
   {
     title: 'MetaMint | NFT Marketplace',
@@ -44,7 +44,7 @@ const projects = [
     technologies: ['React', 'Next.js', 'Express', 'Supabase', 'Tailwind CSS', 'Next-Auth'],
     image: '/images/project-sc/metamint.png',
     github: 'https://github.com/moiz2405/Decentralized-Marketplace',
-    demo: 'https://metamint.almoizkhan.me',
+    demo: 'https://metamint.almoizkhan.tech',
   },
   {
     title: 'PortFolio | Personal Portfolio Website',
@@ -108,10 +108,10 @@ function ProjectCard({
         </div>
       )}
 
-      <Card className="relative bg-gradient-to-tr from-gray-800 to-gray-900 border border-white border-opacity-30 hover:border-blue-400 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-[1.03] h-full">
+      <Card className="relative bg-gradient-to-br from-gray-800/95 to-gray-900/95 border-2 border-gray-700 hover:border-blue-400 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 ease-in-out transform hover:scale-[1.03] h-full">
         <CardHeader>
-          <CardTitle className="text-blue-400 text-lg font-semibold tracking-wide">{project.title}</CardTitle>
-          <CardDescription className="text-white text-sm font-light mt-2">
+          <CardTitle className="text-blue-400 text-xl font-bold tracking-wide">{project.title}</CardTitle>
+          <CardDescription className="text-gray-300 text-sm font-light mt-2 leading-relaxed">
             {project.description}
           </CardDescription>
         </CardHeader>
@@ -120,7 +120,7 @@ function ProjectCard({
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="text-xs font-medium bg-gray-700 text-gray-300 px-2 py-1 rounded-lg shadow-sm transition-all duration-300 hover:bg-blue-400 hover:text-gray-900 hover:shadow-md"
+                className="text-xs font-medium bg-gray-700/80 text-gray-300 px-3 py-1.5 rounded-lg shadow-sm transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-500/30 hover:scale-105"
               >
                 {tech}
               </span>
@@ -128,7 +128,7 @@ function ProjectCard({
           </div>
         </CardContent>
         <CardFooter className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0 sm:space-x-2">
-          <Button asChild variant="outline" className="w-full sm:w-auto border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 ease-in-out group relative overflow-hidden">
+          <Button asChild variant="outline" className="w-full sm:w-auto border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 ease-in-out group relative overflow-hidden rounded-lg">
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="relative z-10">
               View Code
               <span className="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
@@ -137,11 +137,10 @@ function ProjectCard({
           </Button>
 
           {project.demo && (
-            <Button asChild className="w-full sm:w-auto bg-blue-400 text-gray-900 hover:bg-blue-500 transition-all duration-300 ease-in-out group relative overflow-hidden">
+            <Button asChild className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 ease-in-out group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl hover:shadow-blue-500/50">
               <a href={project.demo} target="_blank" rel="noopener noreferrer" className="relative z-10">
                 Live Project
-                <span className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-                <span className="absolute inset-0 border-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></span>
+                <span className="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
               </a>
             </Button>
           )}
@@ -156,7 +155,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className="scroll-mt-20 relative">
-      <h2 className="text-2xl font-bold mb-6 text-blue-400">Projects</h2>
+      <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+        Featured Projects
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (

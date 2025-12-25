@@ -1,0 +1,164 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+
+% Section Formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom Commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=$\bullet$]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Almoiz Khan} \\ \vspace{1pt}
+    \small Hyderabad, India $|$ \href{mailto:almoiz907@gmail.com}{almoiz907@gmail.com} $|$ +91 9989538057 \\
+    \href{https://almoizkhan.tech}{Portfolio} $|$
+    \href{https://linkedin.com/in/almoiz-khan}{LinkedIn} $|$
+    \href{https://github.com/moiz2405}{GitHub}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Founding Engineer and Lead Developer at BharatNiti AI, owning end-to-end system design, development, deployment, and scaling of production systems. Strong focus on backend engineering, cloud infrastructure, DevOps, and cost-efficient system architecture.
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Bachelor of Technology in Computer Science (Cyber Security)}{Nov 2022 -- May 2026}
+    {Marri Laxman Reddy Institute of Technology and Management}{Hyderabad, India | CGPA: 9.27/10}
+\resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Founding Engineer \& Lead Developer}{Dec 2025 -- Present}
+    {BharatNiti AI}{Remote}
+    \resumeItemListStart
+      \resumeItem{Owning end-to-end system architecture, development, deployment, and production scalability across the platform.}
+      \resumeItem{Leading frontend, backend, and infrastructure decisions with a focus on performance, security, and cost optimization.}
+      \resumeItem{Collaborating with founders on technical strategy, product roadmap, and long-term scalability planning.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Full Stack Developer Intern (Early Team Member)}{Sep 2025 -- Dec 2025}
+    {BharatNiti AI}{Remote}
+    \resumeItemListStart
+      \resumeItem{Reduced cloud infrastructure costs by \textbf{~90\%}, cutting expenses from \textbf{\$300K/year to under \$20K/year} by migrating from managed cloud services to self-managed VMs and VPS.}
+      \resumeItem{Decomposed a monolithic application into \textbf{microservices}, improving scalability, fault isolation, and deployment velocity.}
+      \resumeItem{Optimized backend APIs and frontend data flow, reducing \textbf{40--50\% API calls} and significantly improving UI performance.}
+      \resumeItem{Owned infrastructure end-to-end including servers, deployments, monitoring, and security using Next.js and FastAPI.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Craftable – No-Code Portfolio Builder} $|$ \emph{Next.js, TypeScript, Tailwind CSS}}{}
+    \resumeItemListStart
+      \resumeItem{Built a no-code portfolio platform with reusable components and drag-and-drop templates.}
+      \resumeItem{Deployed on Vercel with CI/CD enabling rapid iteration and versioned releases.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Vision – AI Developer Assistant} $|$ \emph{Python, Agno, TTS/STT}}{}
+    \resumeItemListStart
+      \resumeItem{Built a developer assistant with TTS/STT integration achieving 95\%+ voice command accuracy.}
+      \resumeItem{Improved developer productivity by 30\% through voice-driven automation and task execution.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \item
+    \resumeItemListStart
+      \resumeItem{\textbf{Cloud \& DevOps:} AWS (EC2, S3), Docker, Kubernetes, Terraform, VPS, Linux}
+      \resumeItem{\textbf{Backend:} FastAPI, Node.js, PostgreSQL, MongoDB}
+      \resumeItem{\textbf{Frontend:} Next.js, React.js, TypeScript}
+      \resumeItem{\textbf{Languages:} JavaScript, TypeScript, Python, C++, Java}
+      \resumeItem{\textbf{CI/CD Tools:} GitHub Actions, Jenkins, GitLab CI/CD}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \item
+    \resumeItemListStart
+      \resumeItem{Finalist – Smart India Hackathon 2024 (led a 6-member team)}
+      \resumeItem{Part of Intel® Unnati Smart Innovation Labs – AI/ML Cohort (May 2025)}
+      \resumeItem{Top 9\% globally on LeetCode with 300+ solved problems}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+  \item
+    \resumeItemListStart
+      \resumeItem{Smart Interviews DSA Certification – Platinum Smart Coder (Top 2\%) – Mar 2025}
+      \resumeItem{Postman API Fundamentals Student Expert – Nov 2024}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}

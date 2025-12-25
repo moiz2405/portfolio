@@ -15,18 +15,18 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: " ML & Deep Learning Intern",
-    company: "Shell India",
-    period: "May-2025 - Jun-2025",
-    description: "Improved accuracy of 3 ML models, Analyzed over 100K rows",
-    skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Numpy", "Matplotlib"]
+    title: "Founding Engineer & Lead Developer",
+    company: "BharatNiti AI",
+    period: "Dec 2025 - Present",
+    description: "Owning end-to-end system architecture, development, deployment, and production scalability across the platform",
+    skills: ["Next.js", "FastAPI", "AWS", "Docker"]
   },
   {
-    title: "AI/ML Intern",
-    company: "Google India(via AICTE)",
-    period: "Mar-2024 - Jun-2024",
-    description: "Completed project-based learning on supervised and unsupervised ML algorithms",
-    skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Numpy", "Matplotlib"]
+    title: "Full Stack Developer Intern",
+    company: "BharatNiti AI",
+    period: "Sep 2025 - Dec 2025",
+    description: "Reduced cloud costs by ~90% ($300K to $20K/year), decomposed monolith to microservices, optimized APIs reducing 40-50% calls",
+    skills: ["Next.js", "FastAPI", "Docker", "Kubernetes"]
   }
 ]
 
@@ -35,8 +35,10 @@ export default function Experience() {
 
   return (
     <section id="experience" className="scroll-mt-20">
-      <h2 className="text-2xl font-bold mb-6 text-blue-400">Experience</h2>
-      <div className="space-y-4">
+      <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+        Professional Experience
+      </h2>
+      <div className="space-y-6">
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
@@ -46,24 +48,24 @@ export default function Experience() {
             transition={{ duration: 0.2, delay: index * 0.1 }}
           >
             <Card
-              className={`relative overflow-hidden bg-gradient-to-br from-gray-800/80 to-gray-900/90 rounded-lg border border-white border-opacity-25 transition-all duration-200 ${hoveredIndex === index ? "transform scale-[1.01] border-blue-400/50 shadow-lg shadow-blue-400/10" : ""
+              className={`relative overflow-hidden bg-gradient-to-br from-gray-800/90 to-gray-900/95 rounded-xl border-2 border-gray-700 transition-all duration-300 ${hoveredIndex === index ? "transform scale-[1.02] border-blue-400 shadow-2xl shadow-blue-400/20" : "hover:border-gray-600"
                 }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <CardContent className="relative z-10 p-5">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-                  <h3 className="text-lg font-semibold text-gray-100">{exp.title}</h3>
-                  <span className="text-sm text-gray-400">{exp.period}</span>
+              <CardContent className="relative z-10 p-6">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+                  <h3 className="text-xl font-bold text-gray-100">{exp.title}</h3>
+                  <span className="text-sm text-gray-400 font-medium">{exp.period}</span>
                 </div>
-                <p className="text-blue-400 mb-2 font-medium">{exp.company}</p>
-                <p className="text-gray-300 mb-4 text-sm">{exp.description}</p>
-                <div className="flex flex-wrap gap-1.5">
+                <p className="text-blue-400 mb-3 font-semibold text-lg">{exp.company}</p>
+                <p className="text-gray-300 mb-5 text-sm leading-relaxed">{exp.description}</p>
+                <div className="flex flex-wrap gap-2">
                   {exp.skills.map((skill, skillIndex) => (
                     <Badge
                       key={skillIndex}
                       variant="secondary"
-                      className="bg-blue-400/20 text-blue-200 border border-blue-400/30 transition-all duration-200 hover:bg-blue-400/30 hover:scale-105"
+                      className="bg-blue-500/20 text-blue-300 border border-blue-400/40 transition-all duration-200 hover:bg-blue-500/30 hover:scale-110 hover:shadow-lg hover:shadow-blue-400/30 px-3 py-1"
                     >
                       {skill}
                     </Badge>

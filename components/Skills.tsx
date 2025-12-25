@@ -46,26 +46,31 @@ function SkillItem({
 }) {
   return (
     <div
-      className="group relative flex flex-col items-center p-4 bg-gray-800 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 border border-white border-opacity-30"
+      className="group relative flex flex-col items-center p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:shadow-blue-500/30 border border-gray-700 hover:border-blue-400"
       onMouseEnter={() => {
         onMouseEnter()
         playSound()
       }}
       onMouseLeave={onMouseLeave}
     >
-      <Icon
-        size={32}
-        className={`text-blue-400 transition-transform duration-700 ${isHovered ? 'rotate-[720deg] scale-110' : ''
-          }`}
-      />
+      <div className="relative">
+        <Icon
+          size={32}
+          className={`text-blue-400 transition-all duration-700 ${isHovered ? 'rotate-[720deg] scale-125 text-blue-300' : ''
+            }`}
+        />
+        {isHovered && (
+          <div className="absolute inset-0 blur-xl bg-blue-400 opacity-50 animate-pulse"></div>
+        )}
+      </div>
       <span
-        className={`mt-2 text-sm transition-colors duration-300 ${isHovered ? 'text-white' : 'text-gray-300'
+        className={`mt-2 text-xs font-medium transition-colors duration-300 ${isHovered ? 'text-white' : 'text-gray-300'
           }`}
       >
         {name}
       </span>
       <div
-        className={`absolute inset-0 rounded-lg transition-transform duration-300 ${isHovered ? 'border-2 border-purple-300 opacity-100' : 'opacity-0'
+        className={`absolute inset-0 rounded-xl transition-all duration-300 ${isHovered ? 'border-2 border-blue-400 opacity-100 shadow-lg shadow-blue-400/50' : 'opacity-0'
           }`}
       />
     </div>
@@ -81,7 +86,7 @@ export default function Skills() {
   // Set the volume of the audio element
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.2 // Set volume to 20%
+      audioRef.current.volume = 0.05 // Set volume to 5%
     }
   }, [])
 
@@ -99,8 +104,8 @@ export default function Skills() {
 
   return (
     <section id="skills" className="scroll-mt-20">
-      <h2 className="text-2xl font-bold mb-6 text-blue-400 shadow-2xl shadow-blue-600">
-        Skills
+      <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+        Skills & Technologies
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
         {skills.map((skill) => (
