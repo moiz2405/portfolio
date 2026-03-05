@@ -63,12 +63,12 @@ export default function Sidebar() {
             </div>
             <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold mt-6 transition-all duration-300 transform hover:scale-105">
               <Link 
-                href="https://bharatniti.ai" 
+                href="https://www.linkedin.com/in/almoiz-khan/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-300 transition-colors relative group inline-block"
               >
-                Founding Engineer at BharatNiti AI
+                Lead Developer at PetRay Pvt. Ltd
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </h1>
