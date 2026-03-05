@@ -15,18 +15,20 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Founding Engineer & Lead Developer",
-    company: "BharatNiti AI",
-    period: "Dec 2025 - Present",
-    description: "Owning end-to-end system architecture, development, deployment, and production scalability across the platform",
-    skills: ["Next.js", "FastAPI", "AWS", "Docker"]
+    title: "Lead Developer",
+    company: "PetRay Pvt. Ltd \u00b7 Full-time",
+    period: "Jan 2026 - Present \u00b7 3 mos",
+    description:
+      "Leading end-to-end development of PetRay's core platform, from system design and implementation to deployment and performance tuning.",
+    skills: ["Full Stack", "System Design", "Team Leadership"]
   },
   {
-    title: "Full Stack Developer Intern",
-    company: "BharatNiti AI",
-    period: "Sep 2025 - Dec 2025",
-    description: "Reduced cloud costs by ~90% ($300K to $20K/year), decomposed monolith to microservices, optimized APIs reducing 40-50% calls",
-    skills: ["Next.js", "FastAPI", "Docker", "Kubernetes"]
+    title: "Full Stack Engineer (Intern \u2192 Founding Engineer)",
+    company: "Bharat Niti AI \u00b7 Full-time",
+    period: "Sep 2025 - Jan 2026 \u00b7 5 mos",
+    description:
+      "Grew from intern to founding engineer, contributing across the stack, refining architecture, and helping ship production-ready features quickly.",
+    skills: ["Next.js", "FastAPI", "AWS", "Docker"]
   }
 ]
 
