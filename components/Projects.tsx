@@ -7,6 +7,14 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
+    title: 'Sentry | Microservice Health & Telemetry',
+    description: 'Microservice health telemetry, analysis, and notification system for production workloads.',
+    technologies: ['FastAPI', 'Python', 'PostgreSQL', 'Prometheus', 'Grafana', 'Docker', 'Kubernetes'],
+    image: '/placeholder.svg',
+    github: '',
+    demo: 'https://sentrylabs.live',
+  },
+  {
     title: 'VISION | Developer Desktop Assistant',
     description: 'AI Powered Desktop Assistant | Platform to help optimize developers workflows',
     technologies: ['Python', 'Agno(Prev. Phidata)', 'Pydantic', 'TTS/STT',],
